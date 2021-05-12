@@ -293,3 +293,5 @@ public class PasswordMeterV1 {
                 + "\n[C: " + countSeqSymbol + " | B: " + bonusSeqSymbol + "] Sequential Symbols";
     }
 }
+
+
