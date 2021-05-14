@@ -16,6 +16,10 @@ public class Main {
         ResultadoDeAnaliseLetrasMinusculas resultadoDeAnaliseLetrasMinusculas = new ResultadoDeAnaliseLetrasMinusculas("jabuTicaBa");
         int bonusObtidoLetrasMinusculas = resultadoDeAnaliseLetrasMinusculas.obterBonus();
         System.out.println(bonusObtidoLetrasMinusculas);
+
+        ResultadoDeAnaliseQuantidadeDeNumeros resultadoDeAnaliseQuantidadeDeNumeros = new ResultadoDeAnaliseQuantidadeDeNumeros("jabuTicaBa");
+        int bonusObtidoQuantidadeDeNumeros = resultadoDeAnaliseQuantidadeDeNumeros.obterBonus();
+        System.out.println(bonusObtidoQuantidadeDeNumeros);
     }
 
 
