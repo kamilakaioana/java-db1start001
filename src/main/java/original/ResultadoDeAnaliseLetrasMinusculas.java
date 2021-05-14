@@ -6,7 +6,7 @@ public class ResultadoDeAnaliseLetrasMinusculas extends ResultadoDeAnalise {
     private TipoEstado estado;
 
     public int bonusLength;
-    public int bonusAlphaUC;
+    public int bonusAlphaLC;
 
 
 
@@ -25,11 +25,11 @@ public class ResultadoDeAnaliseLetrasMinusculas extends ResultadoDeAnalise {
         else estado = TipoEstado.EXCELENTE;
     }
 
-    public int contadorLetrasMaiusculas(String senha) {
+    public int contadorLetrasMinusculas(String senha) {
         int contador = 0;
 
         for (int i = 0; i < senha.length(); i++) {
-            if (Character.isUpperCase(senha.charAt(i))) {
+            if (Character.isLowerCase(senha.charAt(i))) {
                 contador++;
             }
         }
@@ -37,11 +37,11 @@ public class ResultadoDeAnaliseLetrasMinusculas extends ResultadoDeAnalise {
     }
 
     public void calcularResultado(String senha) {
-        int resultadoLetrasMaiusculas = contadorLetrasMaiusculas(senha);{
+        int resultadoLetrasMinusculas = contadorLetrasMinusculas(senha);{
             bonusLength = bonus;
-            if (resultadoLetrasMaiusculas > 0 && resultadoLetrasMaiusculas < contagem) {
-                bonus = bonus + (contagem - resultadoLetrasMaiusculas) * 2;
-                bonusAlphaUC = (contagem - resultadoLetrasMaiusculas) * 2;
+            if (resultadoLetrasMinusculas > 0 && resultadoLetrasMinusculas < contagem) {
+                bonus = bonus + (contagem - resultadoLetrasMinusculas) * 2;
+                bonusAlphaLC = (contagem - resultadoLetrasMinusculas) * 2;
             }
         }
     }
