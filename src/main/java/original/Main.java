@@ -7,6 +7,11 @@ public class Main {
         int bonusObtidoCaracteres = resultadoDeAnaliseNumeroCaracteres.obterBonus();
         System.out.println(bonusObtidoCaracteres);
 
-
+        ResultadoDeAnaliseLetrasMaiusculas resultadoDeAnaliseLetrasMaiusculas = new ResultadoDeAnaliseLetrasMaiusculas("jabuTicaba");
+        int bonusObtidoLetrasMaiusculas = resultadoDeAnaliseLetrasMaiusculas.obterBonus();
+        System.out.println(bonusObtidoLetrasMaiusculas);
     }
+
+
+
 }

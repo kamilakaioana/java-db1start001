@@ -25,6 +25,7 @@ public class ResultadoDeAnaliseNumeroCaracteres extends ResultadoDeAnalise {
         bonus = contagem * multiplicador;
     }
 
+
     @Override
     int obterBonus() {
         return bonus;
