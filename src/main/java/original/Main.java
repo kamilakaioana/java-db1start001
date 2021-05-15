@@ -28,6 +28,10 @@ public class Main {
         ResultadoDeAnaliseNumerosSimbolosNoMeio resultadoDeAnaliseNumerosSimbolosNoMeio = new ResultadoDeAnaliseNumerosSimbolosNoMeio("@@!!jabuTic4Ba");
         int bonusObtidoNumerosSimbolosMeio = resultadoDeAnaliseNumerosSimbolosNoMeio.obterBonus();
         System.out.println(bonusObtidoNumerosSimbolosMeio);
+
+        ResultadoDeAnaliseLetrasSomente resultadoDeAnaliseLetrasSomente = new ResultadoDeAnaliseLetrasSomente("@@!!jabuTic4Ba");
+        int bonusObtidoLetrasSomente = resultadoDeAnaliseLetrasSomente.obterBonus();
+        System.out.println(bonusObtidoLetrasSomente);
     }
 
 
