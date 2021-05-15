@@ -1,7 +1,5 @@
 package original;
 
-import com.sun.source.util.SourcePositions;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -32,6 +30,10 @@ public class Main {
         ResultadoDeAnaliseLetrasSomente resultadoDeAnaliseLetrasSomente = new ResultadoDeAnaliseLetrasSomente("@@!!jabuTic4Ba");
         int bonusObtidoLetrasSomente = resultadoDeAnaliseLetrasSomente.obterBonus();
         System.out.println(bonusObtidoLetrasSomente);
+
+        ResultadoDeAnaliseRequisitosCumpridos resultadoDeAnaliseRequisitosCumpridos = new ResultadoDeAnaliseRequisitosCumpridos("@@!!jabuTic4Ba");
+        int bonusObtidoRequisitosCumpridos = resultadoDeAnaliseRequisitosCumpridos.obterBonus();
+        System.out.println(bonusObtidoRequisitosCumpridos);
     }
 
 
