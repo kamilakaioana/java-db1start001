@@ -34,6 +34,10 @@ public class Main {
         ResultadoDeAnaliseRequisitosCumpridos resultadoDeAnaliseRequisitosCumpridos = new ResultadoDeAnaliseRequisitosCumpridos("@@!!jabuTic4Ba");
         int bonusObtidoRequisitosCumpridos = resultadoDeAnaliseRequisitosCumpridos.obterBonus();
         System.out.println(bonusObtidoRequisitosCumpridos);
+
+        ResultadoDeAnaliseNumerosSomente resultadoDeAnaliseNumerosSomente = new ResultadoDeAnaliseNumerosSomente("@@!!jabuTic4Ba");
+        int bonusObtidoNumerosSomente = resultadoDeAnaliseNumerosSomente.obterBonus();
+        System.out.println(bonusObtidoNumerosSomente);
     }
 
 
