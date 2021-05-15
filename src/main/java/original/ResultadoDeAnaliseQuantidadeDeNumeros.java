@@ -4,12 +4,13 @@ public class ResultadoDeAnaliseQuantidadeDeNumeros extends ResultadoDeAnalise{
     private int contagem = senha.length();
     private int bonus;
     private TipoEstado estado;
+    public int bonusNumeros;
 
 
 
     public ResultadoDeAnaliseQuantidadeDeNumeros(String senha) {
         super(senha);
-      //  calcularResultado(senha);
+        calcularResultado(senha);
         calcularEstado();
     }
     private void calcularEstado() {
@@ -21,8 +22,42 @@ public class ResultadoDeAnaliseQuantidadeDeNumeros extends ResultadoDeAnalise{
         else estado = TipoEstado.EXCELENTE;
     }
 
-    //terminar o metodos
 
+
+    public int contadorQuantidadeDeNumeros(String senha) {
+        int contador = 0;
+
+        for (int i = 0; i < senha.length(); i++) {
+            int numeroNaTabelaASCII = Character.getNumericValue(senha.charAt(i));
+            if (numeroNaTabelaASCII >= 0 && numeroNaTabelaASCII <= 9) {
+
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    //terminar o metodos
+    public void calcularResultado(String senha) {
+        int resultadoDosNumeros = contadorQuantidadeDeNumeros(senha);
+
+            if (resultadoDosNumeros > 0 && resultadoDosNumeros < contagem) {
+                int multiplicador = 4;
+
+                bonus = bonus + resultadoDosNumeros * multiplicador;
+                bonusNumeros = resultadoDosNumeros * multiplicador;
+            }
+
+    }
+
+
+
+
+//
+//        if (countNumber > 0 && countNumber < countLength) {
+//            int multiplierNumber = 4;
+//            score = score + countNumber * multiplierNumber;
+//            bonusNumber = countNumber * multiplierNumber;
 
 
     @Override
