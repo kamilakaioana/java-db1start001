@@ -1,18 +1,21 @@
 package original;
 
-public class ResultadoDeAnaliseQuantidadeDeNumeros extends ResultadoDeAnalise{
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ResultadoDeAnaliseSimbolos extends ResultadoDeAnalise{
     private int contagem = senha.length();
     private int bonus;
     private TipoEstado estado;
-    public int bonusNumeros;
 
+    public int bonusSimbolo;
 
-
-    public ResultadoDeAnaliseQuantidadeDeNumeros(String senha) {
+    public ResultadoDeAnaliseSimbolos(String senha) {
         super(senha);
         calcularResultado(senha);
         calcularEstado();
     }
+
     private void calcularEstado() {
         contagem = senha.length();
         if (contagem < 1)
@@ -23,14 +26,13 @@ public class ResultadoDeAnaliseQuantidadeDeNumeros extends ResultadoDeAnalise{
     }
 
 
-
-    public int contadorQuantidadeDeNumeros(String senha) {
+    public int contadorQuantidaDeSimbolos(String senha) {
         int contador = 0;
+        Pattern padraoRegex = Pattern.compile("[^a-z0-9_]", Pattern.CASE_INSENSITIVE);
 
-        for (int i = 0; i < senha.length(); i++) {
-            int numeroNaTabelaASCII = Character.getNumericValue(senha.charAt(i));
-            if (numeroNaTabelaASCII >= 0 && numeroNaTabelaASCII <= 9) {
-
+        for (char c: senha.toCharArray()) {
+            Matcher resultadoRegex = padraoRegex.matcher(String.valueOf(c));
+            if (resultadoRegex.find()) {
                 contador++;
             }
         }
@@ -38,18 +40,19 @@ public class ResultadoDeAnaliseQuantidadeDeNumeros extends ResultadoDeAnalise{
     }
 
 
+
     public void calcularResultado(String senha) {
-        int resultadoDosNumeros = contadorQuantidadeDeNumeros(senha);
+            contadorQuantidaDeSimbolos(senha);
+        int resultadoDosSimbolos = contadorQuantidaDeSimbolos(senha);
 
-            if (resultadoDosNumeros > 0 && resultadoDosNumeros < contagem) {
-                int multiplicador = 4;
+        if (resultadoDosSimbolos > 0) {
+            int multiplicador = 6;
 
-                bonus = bonus + resultadoDosNumeros * multiplicador;
-                bonusNumeros = resultadoDosNumeros * multiplicador;
-            }
+            bonus = bonus + resultadoDosSimbolos * multiplicador;
+            bonusSimbolo = resultadoDosSimbolos * multiplicador;
+        }
 
     }
-
 
     @Override
     int obterBonus () {
@@ -70,5 +73,4 @@ public class ResultadoDeAnaliseQuantidadeDeNumeros extends ResultadoDeAnalise{
     TipoOperacao obterTipoOperacao () {
         return TipoOperacao.INCREMENTADOR;
     }
-
 }

@@ -20,6 +20,10 @@ public class Main {
         ResultadoDeAnaliseQuantidadeDeNumeros resultadoDeAnaliseQuantidadeDeNumeros = new ResultadoDeAnaliseQuantidadeDeNumeros("jabuTic4Ba");
         int bonusObtidoQuantidadeDeNumeros = resultadoDeAnaliseQuantidadeDeNumeros.obterBonus();
         System.out.println(bonusObtidoQuantidadeDeNumeros);
+
+        ResultadoDeAnaliseSimbolos resultadoDeAnaliseSimbolos = new ResultadoDeAnaliseSimbolos("@@!!jabuTic4Ba");
+        int bonusObtidoSimbolos = resultadoDeAnaliseSimbolos.obterBonus();
+        System.out.println(bonusObtidoSimbolos);
     }
 
 
