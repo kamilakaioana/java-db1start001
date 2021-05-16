@@ -38,6 +38,15 @@ public class Main {
         ResultadoDeAnaliseNumerosSomente resultadoDeAnaliseNumerosSomente = new ResultadoDeAnaliseNumerosSomente("@@!!jabuTic4Ba");
         int bonusObtidoNumerosSomente = resultadoDeAnaliseNumerosSomente.obterBonus();
         System.out.println(bonusObtidoNumerosSomente);
+
+        ResultadoDeAnaliseCaracteresConsecutivosInsensitive resultadoDeAnaliseCaracteresConsecutivosInsensitive = new ResultadoDeAnaliseCaracteresConsecutivosInsensitive("@@!!AAajabuTic4Ba");
+        int bonusObtidoCaracteresConsecutivosInsensitive = resultadoDeAnaliseCaracteresConsecutivosInsensitive.obterBonus();
+        System.out.println(bonusObtidoCaracteresConsecutivosInsensitive);
+
+        ResultadoDeAnaliseCaracteresConsecutivosMaiusculos resultadoDeAnaliseCaracteresConsecutivosMaiusculos = new ResultadoDeAnaliseCaracteresConsecutivosMaiusculos("@@!!AAajabuTic4Ba");
+        int bonusObtidoCaracteresConsecutivosMaisculos = resultadoDeAnaliseCaracteresConsecutivosMaiusculos.obterBonus();
+        System.out.println(bonusObtidoCaracteresConsecutivosMaisculos);
+
     }
 
 
