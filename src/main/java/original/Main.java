@@ -54,6 +54,10 @@ public class Main {
         ResultadoDeAnaliseLetrasSequenciais resultadoDeAnaliseLetrasSequenciais = new ResultadoDeAnaliseLetrasSequenciais("@@!!AAabcjabuTic4Ba");
         int bonusObtidoLetrasSequenciais = resultadoDeAnaliseLetrasSequenciais.obterBonus();
         System.out.println(bonusObtidoLetrasSequenciais);
+
+        ResultadoDeAnaliseNumerosSequenciais resultadoDeAnaliseNumerosSequenciais = new ResultadoDeAnaliseNumerosSequenciais("@@!!AAabcjabuTic4Ba");
+        int bonusObtidoNumerosSequenciais = resultadoDeAnaliseNumerosSequenciais.obterBonus();
+        System.out.println(bonusObtidoNumerosSequenciais);
     }
 
 
