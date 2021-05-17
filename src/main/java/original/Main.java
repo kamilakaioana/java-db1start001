@@ -58,6 +58,14 @@ public class Main {
         ResultadoDeAnaliseNumerosSequenciais resultadoDeAnaliseNumerosSequenciais = new ResultadoDeAnaliseNumerosSequenciais("@@!!AAabcjabuTic4Ba");
         int bonusObtidoNumerosSequenciais = resultadoDeAnaliseNumerosSequenciais.obterBonus();
         System.out.println(bonusObtidoNumerosSequenciais);
+
+        ResultadoDeAnaliseCaracteresSimbolosSequenciais resultadoDeAnaliseCaracteresSimbolosSequenciais = new ResultadoDeAnaliseCaracteresSimbolosSequenciais("@@!!AAabcjabuTic4Ba");
+        int bonusObtidoSimbolosSequenciais = resultadoDeAnaliseCaracteresSimbolosSequenciais.obterBonus();
+        System.out.println(bonusObtidoSimbolosSequenciais);
+
+        ResultadoDeAnaliseConsecutivosNumeros resultadoDeAnaliseConsecutivosNumeros = new ResultadoDeAnaliseConsecutivosNumeros("@@!!AAabcjabuTic4Ba");
+        int bonusObtidoConsecutivosNumeros = resultadoDeAnaliseConsecutivosNumeros.obterBonus();
+        System.out.println(bonusObtidoConsecutivosNumeros);
     }
 
 
